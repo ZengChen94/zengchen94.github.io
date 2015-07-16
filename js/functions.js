@@ -42,24 +42,28 @@ function timeElapse(date){
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
 	//天
 	var days = Math.floor(seconds / (3600 * 24));
+	days = 6938 - days;
 	seconds = seconds % (3600 * 24);
 	//时
 	var hours = Math.floor(seconds / 3600);
+	hours = 24 - hours;
 	if (hours < 10) {
 		hours = "0" + hours;
 	}
 	seconds = seconds % 3600;
 	//分
 	var minutes = Math.floor(seconds / 60);
+	minutes = 60 - minutes;
 	if (minutes < 10) {
 		minutes = "0" + minutes;
 	}
 	//秒
 	seconds = seconds % 60;
+	seconds = 60 - seconds;
 	if (seconds < 10) {
 		seconds = "0" + seconds;
 	}
-	var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
+	var result = "<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
 	$("#clock").html(result);
 	// $("#clockTmp").html(result);
 }
