@@ -9,7 +9,9 @@ window.addEventListener('load',function(){
         // var userInfo = JSON.parse(localStorage.getItem(userName));              
         // if(userInfo && userInfo.pwd === pwd) 
         if(userName == 'czq' && pwd === '960821') 
-            location.href = 'main.html';               
+            location.href = 'main.html';      
+        if(userName == 'njf' && pwd === 'njf') 
+            location.href = 'submain.html';               
         // alert('fail');          
     }); 
     document.getElementsByTagName('button')[0].addEventListener('click',function(e){       
