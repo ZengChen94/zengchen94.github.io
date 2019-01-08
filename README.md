@@ -49,4 +49,4 @@ Or, run as a local web server:
 jekyll serve watch
 ```
 
-The usage part is quoted from the blog of [Hao Cui](https://github.com/CuiH/Blog). Thanks to him.
+The usage part is quoted from the blog of [Hao Cui](https://github.com/CuiH). Thanks to him.
