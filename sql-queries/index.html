@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Basic Knowledge of SQL - Hello, I'm Chen</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, I'm Chen" property="og:site_name">
+  
+    <meta content="Basic Knowledge of SQL" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="/sql-queries/" property="og:url">
+  
+  
+    <meta content="2017-12-30T04:32:20-06:00" property="article:published_time">
+    <meta content="/about/" property="article:author">
+  
+  
+    <meta content="/img/IMG_1646.JPG" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Knowledge" property="article:tag">
+    
+  
+
+  
+    <meta name="twitter:card" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@zengchen94">
+  
+    <meta name="twitter:title" content="Basic Knowledge of SQL">
+  
+  
+    <meta name="twitter:url" content="/sql-queries/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="/assets/img/IMG_1646.JPG">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/IMG_1646.JPG" alt="Chen Zeng"></a>
+      </div>
+      <div class="author-name">Chen Zeng</div>
+      <p>I'm a Master of Computer Science student at Rice University. At the same time, I'm also a Software Engineer and will intern at Google next summer.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/zengchen94" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/zcunique" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/zengchen94" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/chen-zeng" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:zengchen94@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2017 &copy; Chen Zeng</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Basic Knowledge of SQL</h1>
+        <div class="page-date"><span>2017, Dec 30&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>After reviewing the slides from COMP533 in Fall17, here are some basic knowledge of sql. Thanks for the slides designed by Dr. Risa and shared by Siyue.</p>
+
+<h3 id="the-relational-model">The Relational Model</h3>
+<p>Domain = Attribute = Field: Name of each column and possible values</p>
+
+<p>Tuple = Row = record: A single entry in the table</p>
+
+<h4 id="attribute-datatypes">Attribute Datatypes:</h4>
+<ul>
+  <li>Numeric</li>
+  <li>String</li>
+  <li>Date and Time</li>
+  <li>BLOB (Binary Large Object)</li>
+  <li>Money</li>
+  <li>Array</li>
+  <li>Range</li>
+</ul>
+
+<h4 id="attribute-constraints">Attribute Constraints:</h4>
+<ul>
+  <li>NULL</li>
+  <li>NOT NULL</li>
+  <li>DEFAULT</li>
+  <li>UNIQUE</li>
+  <li>PRIMARY KEY</li>
+  <li>FOREIGN KEY</li>
+  <li>AUTO_INCREMENT</li>
+</ul>
+
+<h3 id="creating-a-table">Creating a Table</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Student</span>
+<span class="p">(</span>
+    <span class="n">studentId</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">lastName</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">firstName</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">dateOfBirth</span> <span class="n">DATE</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">school</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="s1">'Rice'</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">studentId</span><span class="p">)</span>
+<span class="p">);</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SHOW</span> <span class="n">TABLES</span></code></pre></figure>
+
+<h3 id="deleting-a-table">Deleting a Table</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="adding-records-to-a-table">Adding Records to a Table</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span><span class="n">studentId</span><span class="p">,</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="n">dateOfBirth</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="s1">'S00123'</span><span class="p">,</span> <span class="s1">'Washington'</span><span class="p">,</span> <span class="s1">'George'</span><span class="p">,</span> <span class="s1">'1732-02-22'</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'S00124'</span><span class="p">,</span> <span class="s1">'Adams'</span><span class="p">,</span> <span class="s1">'John'</span><span class="p">,</span> <span class="s1">'1735-10-19'</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'S00125'</span><span class="p">,</span> <span class="s1">'Jefferson'</span><span class="p">,</span> <span class="s1">'Thomas'</span><span class="p">,</span> <span class="k">NULL</span><span class="p">);</span></code></pre></figure>
+
+<h3 id="emptying-a-table">Emptying a Table</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">TRUNCATE</span> <span class="k">TABLE</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="select-from-where">SELECT-FROM-WHERE</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="p">[</span><span class="n">attribute</span> <span class="n">list</span><span class="p">]</span>
+<span class="k">FROM</span> <span class="p">[</span><span class="n">tables</span><span class="p">]</span>
+<span class="k">WHERE</span> <span class="p">[</span><span class="n">condiCons</span><span class="p">];</span></code></pre></figure>
+
+<h3 id="select-clause">SELECT Clause</h3>
+<h4 id="attribute">Attribute:</h4>
+<ul>
+  <li>*</li>
+  <li>[tableName].*</li>
+  <li>DISTINCT</li>
+  <li>[math equaCon]</li>
+  <li>[constant]</li>
+  <li>[funcCon]</li>
+</ul>
+
+<h4 id="more-select-clauses">More SELECT clauses</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">CONCAT</span><span class="p">(</span><span class="n">firstName</span><span class="p">,</span> <span class="s1">' '</span><span class="p">,</span> <span class="n">lastName</span><span class="p">)</span> <span class="k">AS</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> 
+    <span class="k">CASE</span> 
+        <span class="k">WHEN</span> <span class="n">dateOfBirth</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">THEN</span> <span class="s1">'Unknown'</span> 
+        <span class="k">ELSE</span> <span class="n">dateOfBirth</span> 
+<span class="k">END</span> <span class="k">AS</span> <span class="n">birthday</span> 
+<span class="k">FROM</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">courseId</span><span class="p">,</span>
+    <span class="k">CASE</span> <span class="n">courseId</span>
+        <span class="k">WHEN</span> <span class="mi">16671</span> <span class="k">THEN</span> <span class="s1">'Grad Databases'</span>
+        <span class="k">WHEN</span> <span class="mi">16670</span> <span class="k">THEN</span> <span class="s1">'Undergrad Databases'</span>
+        <span class="k">ELSE</span> <span class="s1">'Unimportant'</span>
+<span class="k">END</span> <span class="k">AS</span> <span class="s1">'Course Type'</span>
+<span class="k">FROM</span> <span class="n">Course</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="from-clause">FROM Clause</h3>
+
+<h4 id="joins">JOINs</h4>
+<p>In the WHERE clause</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">Student</span> <span class="n">s</span><span class="p">,</span> <span class="n">Enrollment</span> <span class="n">e</span><span class="p">,</span> <span class="n">Course</span> <span class="k">c</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span>
+    <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span>
+    <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">secConId</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">secConId</span><span class="p">;</span></code></pre></figure>
+
+<p>In the FROM clause</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">Student</span> <span class="n">s</span>
+    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Enrollment</span> <span class="n">e</span> <span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span>
+    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Course</span> <span class="k">c</span> <span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span>
+        <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">secConId</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">secConId</span><span class="p">;</span></code></pre></figure>
+
+<ul>
+  <li>INNER JOIN: Only matches</li>
+  <li>LEFT OUTER JOIN: All of Table A’s entries, matches from Table B when present</li>
+  <li>RIGHT OUTER JOIN: All of Table B’s entries, matches from Table A when present</li>
+  <li>CROSS JOIN: All of Table A’s entries paired with all of Table B’s entries</li>
+  <li>SELF JOIN: All of Table A’s entries matched with Table A’s entries</li>
+</ul>
+
+<h3 id="where-clause">WHERE Clause</h3>
+<ul>
+  <li>[attribute] = [value]</li>
+  <li>[attribute] BETWEEN [value1] AND [value2]</li>
+  <li>[attribute] IN ([value1], [value2], …)</li>
+  <li>[attribute] LIKE ‘JEFFER%’</li>
+  <li>IS NULL and IS NOT NULL</li>
+  <li>Logical combinaCons with AND and OR</li>
+  <li>MathemaCcal funcCons &lt;&gt;, !=, &gt;, &lt; …</li>
+  <li>[attribute] NOT IN (subquery that returns one attribute)</li>
+  <li>EXISTS (subquery)</li>
+</ul>
+
+<h3 id="multiset-queries">Multiset Queries</h3>
+<h4 id="union">UNION</h4>
+<ul>
+  <li>UNION – eliminates duplicates</li>
+  <li>UNION ALL – does not eliminate duplicates</li>
+  <li>Uses the column names from the first result set</li>
+  <li>Data types must match</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="s1">'student'</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="s1">'faculty'</span>
+<span class="k">FROM</span> <span class="n">faculty</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="intersect">INTERSECT</h4>
+<p>Implement via an INNER JOIN</p>
+
+<h4 id="difference">DIFFERENCE</h4>
+<p>Implement via an OUTER JOIN and checking for NULL</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">Student</span> <span class="n">s</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Enrollment</span> <span class="n">e</span> <span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span>
+<span class="k">WHERE</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span> <span class="k">IS</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="order">ORDER</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span>
+<span class="k">FROM</span> <span class="n">student</span> <span class="n">s</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="limit">LIMIT</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span>
+<span class="k">FROM</span> <span class="n">student</span> <span class="n">s</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span>
+<span class="k">LIMIT</span> <span class="mi">2</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="aggregation--grouping">Aggregation &amp; Grouping</h4>
+<p>functions: MAX, MIN, COUNT, AVG, etc.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="k">function</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="p">[</span><span class="k">Table</span><span class="p">];</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="p">[</span><span class="n">attribute1</span><span class="p">],</span> <span class="k">function</span><span class="p">([</span><span class="n">attribute2</span><span class="p">])</span>
+<span class="k">FROM</span> <span class="p">[</span><span class="k">Table</span><span class="p">]</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="p">[</span><span class="n">attribute1</span><span class="p">];</span></code></pre></figure>
+
+<h4 id="having-clause">HAVING Clause</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">courseName</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">studentId</span><span class="p">)</span> <span class="k">AS</span> <span class="n">numStudents</span>
+<span class="k">FROM</span> <span class="n">Course</span> <span class="k">C</span><span class="p">,</span> <span class="n">Enrollment</span> <span class="n">e</span>
+<span class="k">WHERE</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span> <span class="k">AND</span> <span class="k">c</span><span class="p">.</span><span class="n">secConId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">secConId</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">courseName</span>
+<span class="k">HAVING</span> <span class="n">numStudents</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="create-view-virtual-table">CREATE VIEW (virtual table)</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">VIEW</span> <span class="n">comp533students</span> <span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">schedule</span><span class="p">,</span> <span class="n">startTime</span><span class="p">,</span> <span class="n">endTime</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span><span class="p">,</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span>
+<span class="k">FROM</span> <span class="n">Course</span> <span class="k">c</span><span class="p">,</span> <span class="n">Enrollment</span> <span class="n">e</span><span class="p">,</span> <span class="n">Student</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span> <span class="k">AND</span> <span class="k">c</span><span class="p">.</span><span class="n">secConId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">secConId</span>
+    <span class="k">AND</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span>
+    <span class="k">AND</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="mi">16671</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">comp533students</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="ddl---create--select-notation">DDL - CREATE … SELECT Notation</h3>
+<p>Create a template and then update values</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Attendance</span>
+    <span class="k">SELECT</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="n">sessionDate</span><span class="p">,</span> <span class="s1">''</span> <span class="k">AS</span> <span class="n">present</span>
+    <span class="k">FROM</span> <span class="n">Course</span> <span class="k">c</span>
+        <span class="k">JOIN</span> <span class="n">enrollment</span> <span class="n">e</span> <span class="k">ON</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span>
+            <span class="k">AND</span> <span class="k">c</span><span class="p">.</span><span class="n">sectionId</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">sectionId</span>
+        <span class="k">JOIN</span> <span class="n">student</span> <span class="n">s</span> <span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span>
+        <span class="k">CROSS</span> <span class="k">JOIN</span> <span class="k">session</span> <span class="n">ss</span> <span class="k">ON</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">courseId</span>
+            <span class="k">AND</span> <span class="k">c</span><span class="p">.</span><span class="n">sectionId</span> <span class="o">=</span> <span class="n">ss</span><span class="p">.</span><span class="n">sectionId</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="ddl---alter-table">DDL - ALTER TABLE</h3>
+<p>Renames</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Student</span> <span class="k">RENAME</span> <span class="k">TO</span> <span class="n">Member</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="n">CHANGE</span> <span class="n">studentId</span> <span class="n">memberId</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<p>Additions</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">gender</span> <span class="n">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">email</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">uniqueEmail</span> <span class="k">UNIQUE</span><span class="p">(</span><span class="n">email</span><span class="p">);</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">enrolled</span> <span class="n">CHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<p>Change types</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="n">CHANGE</span> <span class="n">enrolled</span> <span class="n">enrollYear</span> <span class="n">CHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">MODIFY</span> <span class="k">COLUMN</span> <span class="n">enrollYear</span> <span class="n">INTEGER</span> <span class="k">NULL</span><span class="p">;</span></code></pre></figure>
+
+<p>Deletes/Drops</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="n">enrollYear</span><span class="p">;</span></code></pre></figure>
+
+<p>Constraints</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">DROP</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Member</span> <span class="k">ADD</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">studentId</span><span class="p">,</span> <span class="n">enrollYear</span><span class="p">);</span></code></pre></figure>
+
+<h3 id="ddl---rename-table">DDL - RENAME TABLE</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">RENAME</span> <span class="k">TABLE</span> <span class="o">&lt;</span><span class="n">exisitingTableName</span><span class="o">&gt;</span> <span class="k">TO</span> <span class="o">&lt;</span><span class="n">newTableName</span><span class="o">&gt;</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="dml---delete">DML - DELETE</h3>
+<p>syntax:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELETE</span>
+<span class="k">FROM</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="k">WHERE</span> <span class="o">&lt;</span><span class="k">search</span> <span class="n">condition</span><span class="o">&gt;</span><span class="p">];</span></code></pre></figure>
+
+<p>eg: DELETE based on data in another table</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELETE</span>
+<span class="k">FROM</span> <span class="n">course</span>
+<span class="k">WHERE</span> <span class="n">courseId</span> <span class="k">NOT</span> <span class="k">IN</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="n">courseId</span> <span class="k">FROM</span> <span class="n">enrollment</span><span class="p">);</span></code></pre></figure>
+
+<p>eg: DELETE based on data in the same table</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELETE</span>
+<span class="k">FROM</span> <span class="n">course</span>
+<span class="k">WHERE</span> <span class="n">startTime</span> <span class="o">=</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="n">earliest</span>
+    <span class="k">FROM</span><span class="p">(</span><span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="n">startTime</span><span class="p">)</span> <span class="n">earliest</span>
+        <span class="k">FROM</span> <span class="n">course</span><span class="p">)</span> <span class="n">q</span><span class="p">);</span></code></pre></figure>
+
+<h3 id="dml--insert-into">DML – INSERT INTO</h3>
+<p>eg: Constant Insertion</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Room</span> <span class="p">(</span><span class="n">classroomId</span><span class="p">,</span> <span class="n">building</span><span class="p">,</span> <span class="n">abbrev</span><span class="p">,</span> <span class="n">room</span><span class="p">)</span> <span class="k">VALUES</span>
+    <span class="p">(</span><span class="s1">'DCH1070'</span><span class="p">,</span><span class="s1">'Duncan Hall'</span><span class="p">,</span> <span class="s1">'DCH'</span><span class="p">,</span> <span class="s1">'1070'</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'DCH1055'</span><span class="p">,</span><span class="s1">'Duncan Hall'</span><span class="p">,</span> <span class="s1">'DCH'</span><span class="p">,</span> <span class="s1">'1055'</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'HRZ211'</span><span class="p">,</span><span class="s1">'Herzstein Hall'</span><span class="p">,</span> <span class="s1">'HRZ'</span><span class="p">,</span> <span class="s1">'211'</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'SEW305'</span><span class="p">,</span><span class="s1">'Sewell Hall'</span><span class="p">,</span> <span class="s1">'SEW'</span><span class="p">,</span> <span class="s1">'305'</span><span class="p">);</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Room</span>
+    <span class="k">SET</span> <span class="n">classroomId</span> <span class="o">=</span> <span class="s1">'DCH1080'</span><span class="p">,</span>
+        <span class="n">building</span> <span class="o">=</span> <span class="s1">'Duncan Hall'</span><span class="p">,</span>
+        <span class="n">abbrev</span> <span class="o">=</span> <span class="s1">'DCH'</span><span class="p">,</span>
+        <span class="n">room</span> <span class="o">=</span> <span class="s1">'1080'</span><span class="p">;</span></code></pre></figure>
+
+<p>eg: Query Insertion</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Member</span>
+    <span class="k">SELECT</span> <span class="n">studentId</span><span class="p">,</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="s1">'Student'</span>
+    <span class="k">FROM</span> <span class="n">Student</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="dml--populating-tables">DML – Populating Tables</h3>
+<p>load table from file:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">LOAD</span> <span class="k">DATA</span> <span class="k">LOCAL</span> <span class="n">INFILE</span> <span class="s1">'&lt;path/filename.txt&gt;'</span>
+<span class="k">INTO</span> <span class="k">TABLE</span> <span class="n">an_cases</span>
+<span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">'</span><span class="se">\t</span><span class="s1">'</span> <span class="n">ESCAPED</span> <span class="k">BY</span> <span class="s1">'</span><span class="se">\b</span><span class="s1">'</span>
+<span class="n">OPTIONALLY</span> <span class="n">ENCLOSED</span> <span class="k">BY</span> <span class="s1">'"'</span>
+<span class="n">LINES</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">'</span><span class="se">\r</span><span class="s1">'</span>
+<span class="k">IGNORE</span> <span class="mi">1</span> <span class="n">LINES</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="dml--update">DML – UPDATE</h3>
+<p>syntax:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">UPDATE</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+<span class="k">SET</span> <span class="o">&lt;</span><span class="k">set</span> <span class="n">clause</span> <span class="n">list</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="k">WHERE</span> <span class="o">&lt;</span><span class="k">search</span> <span class="n">condition</span><span class="o">&gt;</span><span class="p">]</span></code></pre></figure>
+
+<p>eg1:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">UPDATE</span> <span class="n">student</span> <span class="k">SET</span> <span class="n">GPA</span> <span class="o">=</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<span class="k">WHERE</span> <span class="n">studentId</span> <span class="k">IN</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="n">studentId</span> <span class="k">FROM</span> <span class="n">Enrollment</span> <span class="n">e</span><span class="p">,</span> <span class="n">Course</span> <span class="k">C</span>
+    <span class="k">WHERE</span> <span class="n">e</span><span class="p">.</span><span class="n">courseId</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">courseId</span>
+        <span class="k">AND</span> <span class="n">courseName</span> <span class="k">LIKE</span> <span class="s1">'COMP 533%'</span><span class="p">);</span></code></pre></figure>
+
+<p>eg2:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">UPDATE</span> <span class="n">student</span> <span class="n">s</span>
+<span class="k">JOIN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">studentId</span><span class="p">,</span> <span class="n">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">grade</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="n">thisGpa</span>
+    <span class="k">FROM</span> <span class="n">grades</span> <span class="k">g</span>
+    <span class="k">WHERE</span> <span class="k">g</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">studentId</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">studen</span><span class="p">)</span><span class="n">d</span><span class="p">)</span> <span class="n">q</span>
+<span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">studentId</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">studentId</span>
+<span class="k">SET</span> <span class="n">s</span><span class="p">.</span><span class="n">gpa</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">thisGPA</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="dml--subqueries">DML – Subqueries</h3>
+
+<h3 id="stored-procedure">Stored Procedure</h3>
+<p>syntax:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="o">&lt;</span><span class="n">procName</span><span class="o">&gt;</span> <span class="p">([</span><span class="o">&lt;</span><span class="n">param</span><span class="o">&gt;</span><span class="p">[,</span> <span class="p">...]])</span> 
+    <span class="o">&lt;</span><span class="n">routineBody</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>eg1:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELIMITER</span> <span class="o">//</span>
+<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">getNumPeaks</span> <span class="p">(</span><span class="k">IN</span> <span class="n">whichRegion</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">))</span>
+<span class="k">BEGIN</span>
+    <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">Peak</span> <span class="k">WHERE</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">whichRegion</span><span class="p">;</span>
+<span class="k">END</span> <span class="o">//</span>
+<span class="k">DELIMITER</span> <span class="p">;</span>
+
+<span class="k">CALL</span> <span class="n">getNumPeaks</span><span class="p">(</span><span class="s1">'Corocoran to Whitney'</span><span class="p">);</span></code></pre></figure>
+
+<p>eg2:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELIMITER</span> <span class="o">//</span>
+<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">getNumPeaks</span> <span class="p">(</span> <span class="k">IN</span> <span class="n">whichRegion</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="k">OUT</span> <span class="k">result</span> <span class="n">INTEGER</span><span class="p">)</span>
+<span class="k">BEGIN</span>
+    <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">PEAK</span> <span class="k">WHERE</span> <span class="n">REGION</span> <span class="o">=</span> <span class="n">whichRegion</span> <span class="k">INTO</span> <span class="k">result</span><span class="p">;</span>
+<span class="k">END</span> <span class="o">//</span>
+<span class="k">DELIMITER</span> <span class="p">;</span>
+
+<span class="k">CALL</span> <span class="n">getNumPeaks</span><span class="p">(</span><span class="s1">'Corocoran to Whitney'</span><span class="p">,</span> <span class="o">@</span><span class="k">result</span><span class="p">);</span>
+<span class="k">SELECT</span> <span class="o">@</span><span class="k">result</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="create-function">CREATE FUNCTION</h3>
+<p>syntax:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">FUNCTION</span> <span class="o">&lt;</span><span class="n">funcName</span><span class="o">&gt;</span> <span class="p">([</span><span class="o">&lt;</span><span class="n">param</span><span class="o">&gt;</span><span class="p">[,</span> <span class="p">...])</span> 
+<span class="k">RETURNS</span> <span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span> 
+    <span class="o">&lt;</span><span class="n">routineBody</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>eg:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DELIMITER</span> <span class="o">//</span>
+<span class="k">CREATE</span> <span class="k">FUNCTION</span> <span class="n">getNumPeaksClimbed</span><span class="p">(</span> <span class="n">whichName</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span> <span class="p">)</span> <span class="k">RETURNS</span> <span class="n">INTEGER</span>
+<span class="k">BEGIN</span>
+    <span class="k">DECLARE</span> <span class="n">numPeaks</span> <span class="n">INTEGER</span> <span class="k">DEFAULT</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">SET</span> <span class="o">@</span><span class="n">numPeaks</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">peak</span><span class="p">)</span>
+        <span class="k">FROM</span> <span class="n">Participated</span> <span class="n">p</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Climbed</span> <span class="k">C</span> <span class="k">ON</span> <span class="n">p</span><span class="p">.</span><span class="n">trip_Id</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">trip_id</span>
+        <span class="k">WHERE</span> <span class="n">p</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">whichName</span>
+    <span class="p">);</span>
+    <span class="k">RETURN</span> <span class="o">@</span><span class="n">numPeaks</span><span class="p">;</span>
+<span class="k">END</span> <span class="o">//</span>
+<span class="k">DELIMITER</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">getNumPeaksClimbed</span><span class="p">(</span><span class="s1">'Edward'</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span> <span class="n">getNumPeaksClimbed</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">AS</span> <span class="n">numPeaks</span> <span class="k">From</span> <span class="n">Participated</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="triggers">Triggers</h3>
+<p>syntax:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="o">&lt;</span><span class="n">triggerName</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">triggerActionTime</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">triggerEvent</span><span class="o">&gt;</span>
+<span class="k">ON</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span> 
+<span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">triggerOrder</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="o">&lt;</span><span class="n">triggerBody</span><span class="o">&gt;</span></code></pre></figure>
+
+<ul>
+  <li>Access the previous version of the row with OLD.<colName></colName></li>
+  <li>Access the new version of the row with NEW.<colName></colName></li>
+</ul>
+
+<p>eg:</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">checkValues</span> <span class="k">BEFORE</span> <span class="k">INSERT</span> <span class="k">ON</span> <span class="n">Peak</span>
+<span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+<span class="k">BEGIN</span>
+    <span class="n">IF</span> <span class="k">NEW</span><span class="p">.</span><span class="n">Elev</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">THEN</span>
+        <span class="k">SET</span> <span class="k">NEW</span><span class="p">.</span><span class="n">Elev</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">END</span> <span class="n">IF</span><span class="p">;</span>
+    <span class="n">IF</span> <span class="k">NEW</span><span class="p">.</span><span class="k">Map</span> <span class="o">=</span> <span class="s1">''</span> <span class="k">THEN</span>
+        <span class="k">SET</span> <span class="k">NEW</span><span class="p">.</span><span class="k">Map</span> <span class="o">=</span> <span class="s1">'Unknown'</span><span class="p">;</span>
+    <span class="k">END</span> <span class="n">IF</span><span class="p">;</span>
+    <span class="n">IF</span> <span class="k">NEW</span><span class="p">.</span><span class="n">Region</span> <span class="o">=</span> <span class="s1">''</span> <span class="k">THEN</span>
+        <span class="k">SET</span> <span class="k">NEW</span><span class="p">.</span><span class="n">Region</span> <span class="o">=</span> <span class="s1">'Unknown'</span><span class="p">;</span>
+    <span class="k">END</span> <span class="n">IF</span><span class="p">;</span>
+<span class="k">END</span> <span class="o">//</span></code></pre></figure>
+
+<ul>
+  <li>If a BEFORE trigger fails, the opera’on is not executed</li>
+  <li>AFTER triggers are not activated if the BEFORE trigger fails</li>
+  <li>If either trigger fails, the entire statement fails</li>
+</ul>
+
+<h3 id="event">Event</h3>
+
+<h3 id="case-statement-syntax">CASE Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CASE</span> <span class="n">peakDiff</span>
+    <span class="k">WHEN</span> <span class="mi">1</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">'EASY'</span><span class="p">;</span>
+    <span class="k">WHEN</span> <span class="mi">2</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">'EASY'</span><span class="p">;</span>
+    <span class="k">WHEN</span> <span class="mi">3</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">'MEDIUM'</span><span class="p">;</span>
+    <span class="k">WHEN</span> <span class="mi">4</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">'HARD'</span><span class="p">;</span>
+    <span class="k">WHEN</span> <span class="mi">5</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">'HARD'</span><span class="p">;</span>
+<span class="k">END</span> <span class="k">CASE</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="if-statement-syntax">IF Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">IF</span> <span class="n">numPeaks</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">THEN</span>
+    <span class="k">SELECT</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">ELSEIF</span> <span class="n">numPeaks</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">THEN</span>
+    <span class="k">SELECT</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">ELSE</span> <span class="k">SELECT</span> <span class="mi">3</span><span class="p">;</span>
+<span class="k">END</span> <span class="n">IF</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="loop-statement-syntax">LOOP Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">LOOP</span>
+<span class="p">...</span>
+<span class="k">END</span> <span class="n">LOOP</span> <span class="n">peakLoop</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="leave-statement-syntax">LEAVE Statement Syntax</h3>
+
+<h3 id="repeat-statement-syntax">REPEAT Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">peakRepeat</span><span class="p">:</span>
+<span class="n">REPEAT</span>
+    <span class="k">SELECT</span> <span class="n">peakDiff</span><span class="p">;</span>
+    <span class="k">SET</span> <span class="n">peakDiff</span> <span class="o">=</span> <span class="n">peakDiff</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">UNTIL</span> <span class="n">peakDiff</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">END</span> <span class="n">REPEAT</span> <span class="n">peakRepeat</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="while-statement-syntax">WHILE Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">peakWhile</span><span class="p">:</span>
+<span class="n">WHILE</span> <span class="n">peakDiff</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="k">DO</span>
+    <span class="k">SELECT</span> <span class="n">peakDiff</span><span class="p">;</span>
+    <span class="k">SET</span> <span class="n">peakDiff</span> <span class="o">=</span> <span class="n">peakDiff</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">END</span> <span class="n">WHILE</span> <span class="n">peakWhile</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="return-statement-syntax">RETURN Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">RETURN</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="iterate-statement-syntax">ITERATE Statement Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">ITERATE</span> <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span></code></pre></figure>
+
+<h3 id="cursors">Cursors</h3>
+<h4 id="step-1-declare-the-cursor">Step 1. Declare the cursor</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">&lt;</span><span class="n">cursorName</span><span class="o">&gt;</span> <span class="k">CURSOR</span> <span class="k">FOR</span> <span class="o">&lt;</span><span class="n">selectStatement</span><span class="o">&gt;</span>
+<span class="k">DECLARE</span> <span class="n">peakCursor</span> <span class="k">CURSOR</span> <span class="k">FOR</span> <span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span> <span class="n">elev</span><span class="p">,</span> <span class="n">diff</span>
+
+<span class="k">FROM</span> <span class="n">Peak</span> <span class="k">WHERE</span> <span class="n">Region</span> <span class="o">=</span> <span class="n">whichRegion</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="step-2-open-the-cursor">Step 2. Open the cursor</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">OPEN</span> <span class="o">&lt;</span><span class="n">cursorName</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">OPEN</span> <span class="n">peakCursor</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="step-3-fetch-the-data">Step 3. Fetch the data</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">FETCH</span> <span class="p">[[</span><span class="k">NEXT</span><span class="p">]</span> <span class="k">FROM</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">cursorName</span><span class="o">&gt;</span>
+    <span class="k">INTO</span> <span class="o">&lt;</span><span class="n">varName</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">varName2</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">...;</span>
+
+<span class="k">FETCH</span> <span class="n">peakCursor</span> <span class="k">INTO</span> <span class="n">peakname</span><span class="p">,</span> <span class="n">peakElev</span><span class="p">,</span> <span class="n">peakDiff</span><span class="p">;</span></code></pre></figure>
+
+<h4 id="step-4-close-the-cursor">Step 4. Close the cursor</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">CLOSE</span> <span class="o">&lt;</span><span class="n">cursorName</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">CLOSE</span> <span class="n">peakCursor</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="raising-conditions">Raising Conditions</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">SIGNAL</span> <span class="k">SQLSTATE</span> <span class="o">&lt;</span><span class="mi">5</span><span class="n">charSting</span><span class="o">&gt;</span>
+    <span class="k">SET</span> <span class="k">MESSAGE_TEXT</span> <span class="o">=</span> <span class="s1">'Region not found'</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="declare-handler-syntax">DECLARE HANDLER Syntax</h3>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">&lt;</span><span class="n">handlerAction</span><span class="o">&gt;</span> <span class="k">HANDLER</span>
+    <span class="k">FOR</span> <span class="o">&lt;</span><span class="n">conditionValue</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">conditionValue</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">...</span>
+    <span class="o">&lt;</span><span class="k">statement</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">DECLARE</span> <span class="k">CONTINUE</span> <span class="k">HANDLER</span> <span class="k">FOR</span> <span class="k">SQLSTATE</span> <span class="o">&lt;</span><span class="mi">5</span><span class="n">charSinng</span><span class="o">&gt;</span>
+    <span class="k">SELECT</span> <span class="s1">'Error 531 occurred. Halting'</span><span class="p">;</span></code></pre></figure>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Basic Knowledge of SQL&url=/sql-queries/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=/sql-queries/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=/sql-queries/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Knowledge" class="tag">&#35; Knowledge</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
