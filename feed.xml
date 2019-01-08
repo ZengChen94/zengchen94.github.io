@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inventory</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://localhost:4000/jekyll-simple/</link>
+    <atom:link href="http://localhost:4000/jekyll-simple/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 08 Jan 2019 20:34:31 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Jan 2019 20:34:31 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Security and Privacy in Deep Learnig</title>
+        <description>&lt;p&gt;This is a paper list concerning topics on the trust and dependencies of deep learning: adversarial deep learning and privacy-preserving deep learning. A list of adversarial machine learning papers is also provided for reference.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#adversarial-deep-learning&quot;&gt;Adversarial Deep Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#privacy-preserving-deep-learning&quot;&gt;Privacy-preserving Deep Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#machine-learning&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;adversarial-deep-learning&quot;&gt;Adversarial Deep Learning&lt;/h2&gt;
+
+&lt;h3 id=&quot;adversarial-attacks&quot;&gt;Adversarial Attacks&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1801.01944&quot;&gt;Audio Adversarial Examples: Targeted Attacks on Speech-to-Text&lt;/a&gt; - Nicholas Carlini et al., 2018&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/7467366/&quot;&gt;The Limitations of Deep Learning in Adversarial Settings&lt;/a&gt; - Nicolas Papernot  et al., (Euro 2016)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1707.08945&quot;&gt;Robust Physical-World Attacks on Deep Learning Models&lt;/a&gt; - Kevin Eykholt et al., (CVPR 2018)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.6572&quot;&gt;Explaining and Harnessing Adversarial Examples&lt;/a&gt; - Ian J. Goodfellow et al., (ICLR 2015)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.html&quot;&gt;DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks&lt;/a&gt; - Seyed-Mohsen Moosavi-Dezfooli et al., (CVPR 2016)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1607.02533&quot;&gt;Adversarial examples in the physical world&lt;/a&gt; - Alexey Kurakin et al., (ICLR 2017)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.01236&quot;&gt;Adversarial Machine Learning at Scale&lt;/a&gt; - Alexey Kurakin et al., (ICLR 2017)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1312.6199&quot;&gt;Intriguing properties of neural networks&lt;/a&gt; - Christian Szegedy et al., 2014&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1702.02284&quot;&gt;Adversarial Attacks on Neural Network Policies&lt;/a&gt; - Sandy Huang et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3053009&quot;&gt;Practical Black-Box Attacks against Machine Learning&lt;/a&gt; - Nicolas Papernot et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-319-66399-9_4&quot;&gt;Adversarial Examples for Malware Detection&lt;/a&gt; - Kathrin Grosse et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1605.07277&quot;&gt;Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples&lt;/a&gt; - Nicolas Papernot et al., 2016&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nicholas.carlini.com/papers/2017_sp_nnrobustattacks.pdf&quot;&gt;Towards Evaluating the Robustness of Neural Networks&lt;/a&gt; - Nicholas Carlini et al., (S&amp;amp;P 2017)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4098.pdf&quot;&gt;Boosting Adversarial Attacks with Momentum&lt;/a&gt; CYinpeng Dong et al., (CVPR 2018)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1707.07397&quot;&gt;Synthesizing Robust Adversarial Examples&lt;/a&gt; - Anish Athalye et al., 2017&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adversarial-mitigation--defense&quot;&gt;Adversarial Mitigation &amp;amp; Defense&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1511.03034&quot;&gt;Learning with a Strong Adversary&lt;/a&gt; - Ruitong Huang et al., 2016&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3134606&quot;&gt;Mitigating Evasion Attacks to Deep Neural Networks via Region-based Classification&lt;/a&gt; - 
+Xiaoyu Cao et al., (ACSAC 2017)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/woot17/woot17-paper-he.pdf&quot;&gt;Adversarial Example Defenses: Ensembles of Weak Defenses are not Strong&lt;/a&gt; - Warren He et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/7546524/&quot;&gt;Distillation as a Defense to Adversarial Perturbations Against Deep Neural Networks &lt;/a&gt; - Nicolas Papernot et al., 2016&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1511.05432&quot;&gt;Understanding Adversarial Training: Increasing Local Stability of Neural Nets through Robust Optimization&lt;/a&gt; - Uri Shaham et al., 2015.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3140444&quot;&gt;Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods&lt;/a&gt; - 
+Nicholas Carlini et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1706.06083&quot;&gt;Towards Deep Learning Models Resistant to Adversarial Attacks&lt;/a&gt; - Aleksander Madry et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.5068&quot;&gt;Towards Deep Neural Network Architectures Robust to Adversarial Examples&lt;/a&gt; - Shixiang Gu et al., 2015&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10994-017-5663-3&quot;&gt;Analysis of classifiers robustness to adversarial perturbation&lt;/a&gt; - Alhussein Fawzi et al., 2018&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1612.00138&quot;&gt;Towards Robust Deep Neural Networks with BANG&lt;/a&gt; - Andras Rozsa et al., 2018&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1710.10571&quot;&gt;Certifying Some Distributional Robustness with Principled Adversarial Training&lt;/a&gt; - Aman Sinha et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.06373&quot;&gt;Adversarial Logit Pairing&lt;/a&gt; Harini Kannan et al., 2018&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3140449&quot;&gt;Efficient Defenses Against Adversarial Attacks&lt;/a&gt; - Valentina Zantedeschi et al., 2017&lt;/li&gt;
+  &lt;li&gt;[Adversarial Examples in Deep Learning:  Characterization and Divergence]((https://arxiv.org/abs/1807.00051) - Wenqi Wei et al., 2018&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;privacy-preserving-deep-learning&quot;&gt;Privacy-Preserving Deep Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8049647/&quot;&gt;On the Protection of Private Information in Machine Learning Systems: Two Recent Approches&lt;/a&gt; - Martín Abadi et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2978318&quot;&gt;Deep Learning with Differential Privacy&lt;/a&gt; - Martin Abadi et al., (CCS 2016)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2813687&quot;&gt;Privacy_preserving Deep Learning&lt;/a&gt; - Reza Shokri et al., (CCS 2015)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;machine-learning&quot;&gt;Machine Learning&lt;/h2&gt;
+
+&lt;h3 id=&quot;deep-machine-learning&quot;&gt;(Deep) Machine Learning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1503.02531&quot;&gt;Distilling the Knowledge in a Neural Network&lt;/a&gt; - Geoffrey Hinton et al., 2015&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/4687-large-scale-distributed-deep-networks&quot;&gt;Large Scale Distributed Deep Networks&lt;/a&gt; - Jeffrey Dean et al., 2012&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1409.1556&quot;&gt;Very Deep Convolutional Networks for Large-Scale Image Recognition&lt;/a&gt; - Karen Simonyan et al., 2015&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5854-spatial-transformer-networks&quot;&gt;Spatial Transformer Networks&lt;/a&gt; - Max Jaderberg et al., 2015&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adversarial-machine-learning&quot;&gt;Adversarial Machine Learning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2046692&quot;&gt;Adversarial Machine Learning&lt;/a&gt; - Ling Huang et al., 2011&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1081950&quot;&gt;Adversarial Learning&lt;/a&gt; - Daniel Lowd et al., 2005&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1802.05351&quot;&gt;Stealing Hyperparameters in Machine Learning&lt;/a&gt; - Binghui Wang et al., 2018&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1128824&quot;&gt;Can Machine Learning be Secure?&lt;/a&gt; - Marco Barreno et al., 2006&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1014066&quot;&gt;Adversarial Classification&lt;/a&gt; - Nilesh Dalvi et al., 2004&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2666656/&quot;&gt;Adversarial Active Learning&lt;/a&gt; - Brad Miller 2014&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8168163/&quot;&gt;Adversarial learning: A critical review and active learning study &lt;/a&gt; - D.J. Miller et al., 2017&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_tramer.pdf&quot;&gt;Stealing	Machine	Learning	Models	via	Prediction	APIs&lt;/a&gt; - Florian Tramèr et al., 2016&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://people.eecs.berkeley.edu/~adj/publications/paper-files/sysml2006-attack.pdf&quot;&gt;Bounding an Attack’s Complexity for a Simple Learning Model&lt;/a&gt; - Blaine Nelson et al., 2006&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1143889&quot;&gt;Nightmare at test time: robust learning by feature deletion&lt;/a&gt; - 
+Amir Globerson et al., 2006&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-642-40994-3_25&quot;&gt;Evasion Attacks against Machine Learning at Test Time&lt;/a&gt; -Battista Biggio et al., 2013&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;privacy-preserving-machine-learning&quot;&gt;Privacy-preserving Machine Learning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/0911.5708&quot;&gt;Learning in a Large Function Space: Privacy-Preserving Mechanisms for SVM Learning&lt;/a&gt; - Benjamin I. P. Rubinstein et al., 2009&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=773173&quot;&gt;Revealing information while preserving privacy&lt;/a&gt; - Irit Dinur et al., 2003&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;papers.nips.cc/paper/3486-privacy-preserving-logistic-regression&quot;&gt;Privacy-preserving logistic regression&lt;/a&gt; - Kamalika Chaudhuri et al., 2008&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1866758&quot;&gt;A firm foundation for private data analysis&lt;/a&gt; - Cynthia Dwork 2011&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;static.usenix.org/legacy/events/sec10/tech/full_papers/Duan.pdf&quot;&gt;P4P: Practical Large-Scale Privacy-Preserving Distributed Computation Robust against Malicious Users
+&lt;/a&gt; - Yitao Duan et al., 2010&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;licenses&quot;&gt;Licenses&lt;/h2&gt;
+&lt;p&gt;License&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt;&lt;img src=&quot;http://i.creativecommons.org/p/zero/1.0/88x31.png&quot; alt=&quot;CC0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To the extent possible under law, &lt;a href=&quot;https://wenqiwei789.github.io/Homepage/&quot;&gt;Wenqi Wei&lt;/a&gt; has waived all copyright and related or neighboring rights to this work.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Jan 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/jekyll-simple/jekyll/2019/01/08/Security-and-Privacy-in-Deep-Learnig.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll-simple/jekyll/2019/01/08/Security-and-Privacy-in-Deep-Learnig.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Styles at a glance</title>
+        <description>&lt;p&gt;Simple is a beautiful but functional jekyll theme. The font-type setting looks really good when writers use CJK mixed with English.&lt;/p&gt;
+
+&lt;p&gt;First of all, let’s have a glance at the basic styles: &lt;a href=&quot;http://github.com/wild-flame/jekyll-simple&quot;&gt;link&lt;/a&gt;, &lt;strong&gt;strong&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, &lt;del&gt;deletion&lt;/del&gt;, &lt;ins&gt;insertion&lt;/ins&gt;.&lt;/p&gt;
+
+&lt;!--description--&gt;
+
+&lt;h3 id=&quot;headers&quot;&gt;Headers:&lt;/h3&gt;
+
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
+
+&lt;h3 id=&quot;lists&quot;&gt;Lists:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;list item 1&lt;/li&gt;
+  &lt;li&gt;list item 2&lt;/li&gt;
+  &lt;li&gt;list item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;list item 1&lt;/li&gt;
+  &lt;li&gt;list item 2&lt;/li&gt;
+  &lt;li&gt;list item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;blockquote&quot;&gt;Blockquote:&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;basscss-colors&quot;&gt;&lt;a href=&quot;http://www.basscss.com/&quot;&gt;BASSCSS&lt;/a&gt; colors:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;span class=&quot;black&quot;&gt;black&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;gray&quot;&gt;gray&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;silver&quot;&gt;silver&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;white&quot;&gt;white&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;aqua&quot;&gt;aqua&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;blue&quot;&gt;blue&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;navy&quot;&gt;navy&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;teal&quot;&gt;teal&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;green&quot;&gt;green&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;olive&quot;&gt;olive&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;lime&quot;&gt;lime&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;yellow&quot;&gt;yellow&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;orange&quot;&gt;orange&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;red&quot;&gt;red&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;fuchsia&quot;&gt;fuchsia&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;purple&quot;&gt;purple&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class=&quot;maroon&quot;&gt;maroon&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;horizontal-rule&quot;&gt;Horizontal rule:&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;image&quot;&gt;Image:&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/jekyll-simple/assets/img/image.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;table&quot;&gt;Table:&lt;/h3&gt;
+
+&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;Age&lt;/th&gt;
+			&lt;th&gt;Fruit&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Alex&lt;/td&gt;
+			&lt;td&gt;22&lt;/td&gt;
+			&lt;td&gt;Apple&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Bran&lt;/td&gt;
+			&lt;td&gt;20&lt;/td&gt;
+			&lt;td&gt;Orange&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Mike&lt;/td&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;Waltermelon&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;code-snippet&quot;&gt;Code snippet&lt;/h3&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// index.js&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 03 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/jekyll-simple/jekyll/2016/07/03/styles-for-simple.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll-simple/jekyll/2016/07/03/styles-for-simple.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--description--&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 19 Jun 2016 21:06:26 +0800</pubDate>
+        <link>http://localhost:4000/jekyll-simple/jekyll/2016/06/19/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll-simple/jekyll/2016/06/19/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+  </channel>
+</rss>
