@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Security and Privacy in Deep Learnig</title>
+  <meta name="description" content="This is a paper list concerning topics on the trust and dependencies of deep learning: adversarial deep learning and privacy-preserving deep learning. A list...">
+
+  <!-- evil icon -->
+
+  <link rel="stylesheet" href="/jekyll-simple//assets/evil-icons.min.css">
+  <script src="/jekyll-simple//assets/evil-icons.min.js"></script>
+
+  <!-- todo: include this into main.css -->
+
+  <link rel="stylesheet" href="/jekyll-simple//css/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll-simple//jekyll/2019/01/08/Security-and-Privacy-in-Deep-Learnig.html">
+  <link rel="alternate" type="application/rss+xml" title="Inventory" href="http://localhost:4000/jekyll-simple//feed.xml">
+</head>
+
+  <body>
+    <div class="page-content">
+      <div class="container">
+        <div class="three columns">
+          <header class="site-header">
+
+  <h2 class="logo"><a href="/jekyll-simple//">Inventory</a></h2>
+
+  <div class="nav">
+    
+    <label for="menu-toggle" class="menu-icon">
+        <!--div data-icon="ei-navicon"></div-->
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+    </label>
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="site-nav">
+      <nav>
+        <ul class="page-link">
+          <li><a href="/jekyll-simple//">Home</a></li>
+          <li><a href="/jekyll-simple//archive">Posts</a></li>
+          <li><a href="/jekyll-simple//about">About</a></li>
+          <li><a href="/jekyll-simple//feed.xml">RSS</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</header>
+
+        </div>
+
+        <div class="nine columns" style="z-index:100;">
+          <div class="wrapper">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="artilce_header">
+    <h1 class="artilce_title" itemprop="name headline">Security and Privacy in Deep Learnig</h1>
+    <p class="artilce_meta"><time datetime="2019-01-08T00:00:00+08:00" itemprop="datePublished">Jan 8, 2019</time></p>
+  </header>
+
+  <div class="article-content" itemprop="articleBody">
+    <p>This is a paper list concerning topics on the trust and dependencies of deep learning: adversarial deep learning and privacy-preserving deep learning. A list of adversarial machine learning papers is also provided for reference.</p>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li><a href="#adversarial-deep-learning">Adversarial Deep Learning</a></li>
+  <li><a href="#privacy-preserving-deep-learning">Privacy-preserving Deep Learning</a></li>
+  <li><a href="#machine-learning">Machine Learning</a></li>
+</ul>
+
+<hr />
+
+<h2 id="adversarial-deep-learning">Adversarial Deep Learning</h2>
+
+<h3 id="adversarial-attacks">Adversarial Attacks</h3>
+<ul>
+  <li><a href="https://arxiv.org/abs/1801.01944">Audio Adversarial Examples: Targeted Attacks on Speech-to-Text</a> - Nicholas Carlini et al., 2018</li>
+  <li><a href="https://ieeexplore.ieee.org/abstract/document/7467366/">The Limitations of Deep Learning in Adversarial Settings</a> - Nicolas Papernot  et al., (Euro 2016)</li>
+  <li><a href="https://arxiv.org/abs/1707.08945">Robust Physical-World Attacks on Deep Learning Models</a> - Kevin Eykholt et al., (CVPR 2018)</li>
+  <li><a href="https://arxiv.org/abs/1412.6572">Explaining and Harnessing Adversarial Examples</a> - Ian J. Goodfellow et al., (ICLR 2015)</li>
+  <li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Moosavi-Dezfooli_DeepFool_A_Simple_CVPR_2016_paper.html">DeepFool: A Simple and Accurate Method to Fool Deep Neural Networks</a> - Seyed-Mohsen Moosavi-Dezfooli et al., (CVPR 2016)</li>
+  <li><a href="https://arxiv.org/abs/1607.02533">Adversarial examples in the physical world</a> - Alexey Kurakin et al., (ICLR 2017)</li>
+  <li><a href="https://arxiv.org/abs/1611.01236">Adversarial Machine Learning at Scale</a> - Alexey Kurakin et al., (ICLR 2017)</li>
+  <li><a href="https://arxiv.org/abs/1312.6199">Intriguing properties of neural networks</a> - Christian Szegedy et al., 2014</li>
+  <li><a href="https://arxiv.org/abs/1702.02284">Adversarial Attacks on Neural Network Policies</a> - Sandy Huang et al., 2017</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3053009">Practical Black-Box Attacks against Machine Learning</a> - Nicolas Papernot et al., 2017</li>
+  <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-66399-9_4">Adversarial Examples for Malware Detection</a> - Kathrin Grosse et al., 2017</li>
+  <li><a href="https://arxiv.org/abs/1605.07277">Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples</a> - Nicolas Papernot et al., 2016</li>
+  <li><a href="https://nicholas.carlini.com/papers/2017_sp_nnrobustattacks.pdf">Towards Evaluating the Robustness of Neural Networks</a> - Nicholas Carlini et al., (S&amp;P 2017)</li>
+  <li><a href="http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/4098.pdf">Boosting Adversarial Attacks with Momentum</a> CYinpeng Dong et al., (CVPR 2018)</li>
+  <li><a href="https://arxiv.org/abs/1707.07397">Synthesizing Robust Adversarial Examples</a> - Anish Athalye et al., 2017</li>
+</ul>
+
+<h3 id="adversarial-mitigation--defense">Adversarial Mitigation &amp; Defense</h3>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/1511.03034">Learning with a Strong Adversary</a> - Ruitong Huang et al., 2016</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3134606">Mitigating Evasion Attacks to Deep Neural Networks via Region-based Classification</a> - 
+Xiaoyu Cao et al., (ACSAC 2017)</li>
+  <li><a href="https://www.usenix.org/system/files/conference/woot17/woot17-paper-he.pdf">Adversarial Example Defenses: Ensembles of Weak Defenses are not Strong</a> - Warren He et al., 2017</li>
+  <li><a href="https://ieeexplore.ieee.org/abstract/document/7546524/">Distillation as a Defense to Adversarial Perturbations Against Deep Neural Networks </a> - Nicolas Papernot et al., 2016</li>
+  <li><a href="https://arxiv.org/abs/1511.05432">Understanding Adversarial Training: Increasing Local Stability of Neural Nets through Robust Optimization</a> - Uri Shaham et al., 2015.</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3140444">Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods</a> - 
+Nicholas Carlini et al., 2017</li>
+  <li><a href="https://arxiv.org/abs/1706.06083">Towards Deep Learning Models Resistant to Adversarial Attacks</a> - Aleksander Madry et al., 2017</li>
+  <li><a href="https://arxiv.org/abs/1412.5068">Towards Deep Neural Network Architectures Robust to Adversarial Examples</a> - Shixiang Gu et al., 2015</li>
+  <li><a href="https://link.springer.com/article/10.1007/s10994-017-5663-3">Analysis of classifiers robustness to adversarial perturbation</a> - Alhussein Fawzi et al., 2018</li>
+  <li><a href="https://arxiv.org/abs/1612.00138">Towards Robust Deep Neural Networks with BANG</a> - Andras Rozsa et al., 2018</li>
+  <li><a href="https://arxiv.org/abs/1710.10571">Certifying Some Distributional Robustness with Principled Adversarial Training</a> - Aman Sinha et al., 2017</li>
+  <li><a href="https://arxiv.org/abs/1803.06373">Adversarial Logit Pairing</a> Harini Kannan et al., 2018</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3140449">Efficient Defenses Against Adversarial Attacks</a> - Valentina Zantedeschi et al., 2017</li>
+  <li>[Adversarial Examples in Deep Learning:  Characterization and Divergence]((https://arxiv.org/abs/1807.00051) - Wenqi Wei et al., 2018</li>
+</ul>
+
+<hr />
+
+<h2 id="privacy-preserving-deep-learning">Privacy-Preserving Deep Learning</h2>
+
+<ul>
+  <li><a href="https://ieeexplore.ieee.org/abstract/document/8049647/">On the Protection of Private Information in Machine Learning Systems: Two Recent Approches</a> - Martín Abadi et al., 2017</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=2978318">Deep Learning with Differential Privacy</a> - Martin Abadi et al., (CCS 2016)</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=2813687">Privacy_preserving Deep Learning</a> - Reza Shokri et al., (CCS 2015)</li>
+</ul>
+
+<hr />
+
+<h2 id="machine-learning">Machine Learning</h2>
+
+<h3 id="deep-machine-learning">(Deep) Machine Learning</h3>
+<ul>
+  <li><a href="https://arxiv.org/abs/1503.02531">Distilling the Knowledge in a Neural Network</a> - Geoffrey Hinton et al., 2015</li>
+  <li><a href="http://papers.nips.cc/paper/4687-large-scale-distributed-deep-networks">Large Scale Distributed Deep Networks</a> - Jeffrey Dean et al., 2012</li>
+  <li><a href="https://arxiv.org/abs/1409.1556">Very Deep Convolutional Networks for Large-Scale Image Recognition</a> - Karen Simonyan et al., 2015</li>
+  <li><a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks">Spatial Transformer Networks</a> - Max Jaderberg et al., 2015</li>
+</ul>
+
+<h3 id="adversarial-machine-learning">Adversarial Machine Learning</h3>
+<ul>
+  <li><a href="https://dl.acm.org/citation.cfm?id=2046692">Adversarial Machine Learning</a> - Ling Huang et al., 2011</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=1081950">Adversarial Learning</a> - Daniel Lowd et al., 2005</li>
+  <li><a href="https://arxiv.org/abs/1802.05351">Stealing Hyperparameters in Machine Learning</a> - Binghui Wang et al., 2018</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=1128824">Can Machine Learning be Secure?</a> - Marco Barreno et al., 2006</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=1014066">Adversarial Classification</a> - Nilesh Dalvi et al., 2004</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=2666656/">Adversarial Active Learning</a> - Brad Miller 2014</li>
+  <li><a href="https://ieeexplore.ieee.org/abstract/document/8168163/">Adversarial learning: A critical review and active learning study </a> - D.J. Miller et al., 2017</li>
+  <li><a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_tramer.pdf">Stealing	Machine	Learning	Models	via	Prediction	APIs</a> - Florian Tramèr et al., 2016</li>
+  <li><a href="https://people.eecs.berkeley.edu/~adj/publications/paper-files/sysml2006-attack.pdf">Bounding an Attack’s Complexity for a Simple Learning Model</a> - Blaine Nelson et al., 2006</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=1143889">Nightmare at test time: robust learning by feature deletion</a> - 
+Amir Globerson et al., 2006</li>
+  <li><a href="https://link.springer.com/chapter/10.1007/978-3-642-40994-3_25">Evasion Attacks against Machine Learning at Test Time</a> -Battista Biggio et al., 2013</li>
+</ul>
+
+<h3 id="privacy-preserving-machine-learning">Privacy-preserving Machine Learning</h3>
+<ul>
+  <li><a href="https://arxiv.org/abs/0911.5708">Learning in a Large Function Space: Privacy-Preserving Mechanisms for SVM Learning</a> - Benjamin I. P. Rubinstein et al., 2009</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=773173">Revealing information while preserving privacy</a> - Irit Dinur et al., 2003</li>
+  <li><a href="papers.nips.cc/paper/3486-privacy-preserving-logistic-regression">Privacy-preserving logistic regression</a> - Kamalika Chaudhuri et al., 2008</li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=1866758">A firm foundation for private data analysis</a> - Cynthia Dwork 2011</li>
+  <li><a href="static.usenix.org/legacy/events/sec10/tech/full_papers/Duan.pdf">P4P: Practical Large-Scale Privacy-Preserving Distributed Computation Robust against Malicious Users
+</a> - Yitao Duan et al., 2010</li>
+</ul>
+
+<hr />
+
+<h2 id="licenses">Licenses</h2>
+<p>License</p>
+
+<p><a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0" /></a></p>
+
+<p>To the extent possible under law, <a href="https://wenqiwei789.github.io/Homepage/">Wenqi Wei</a> has waived all copyright and related or neighboring rights to this work.</p>
+
+
+  </div>
+
+  <footer class="article-footer">
+
+  <section class="share">
+  <a class="share-link" href="" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    Twitter
+  </a>
+  <a class="share-link" href="" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    Facebook
+  </a>
+  <a class="share-link" href="" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    Google+
+  </a> 
+</section>
+
+
+  <hr/>
+
+  <section class="author">
+  <div class="authorimage box" style="background: url(/jekyll-simple//assets/img/Wenqi_Wei.jpg)"></div>
+  <div class="authorinfo box">
+    <p>Author | Wenqi Wei</p>
+    <p class="bio">
+      Currently a Computer Science Ph.D. in Georgia Institute of Technology. Areas of research interest: big data analytics, machine learning (current focus on deep learning, adversarial learning), privacy-preserving machine learning, data privacy.
+    </p>
+  </div>
+</section>
+
+
+  </footer>
+
+  
+
+
+</article>
+
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+  <div class="container">
+    <div class="footer left column one-half">
+      <section class="small-font">
+        Theme <a href="https://github.com/wild-flame/jekyll-simple"> Simple </a> by <a href="http://wildflame.me">wildflame</a>
+        © 2016 
+        Powered by <a href="https://github.com/jekyll/jekyll">jekyll</a>
+      </section>
+    </div>
+
+    <div class="footer right column one-half">
+      <section class="small-font">
+        
+        <a href="https://github.com/WenqiWei789"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span></a>
+
+        
+        
+        <a href="https://twitter.com/Taffyer"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span></a>
+
+        
+      </section>
+    </div>
+  </div>
+</footer>
+ 
+    </div>
+  </body>
+</html>

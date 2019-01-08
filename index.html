@@ -1,187 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Hello, I'm Chen</title>
+---
+layout: default
+title: Home
+---
 
-  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+<div class="home">
+  <div class="post-list">
 
-    <meta content="Hello, I'm Chen" property="og:site_name">
-  
-    <meta content="Hello, I'm Chen" property="og:title">
-  
-  
-    <meta content="website" property="og:type">
-  
-  
-    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-" property="og:description">
-  
-  
-    <meta content="/" property="og:url">
-  
-  
-  
-    <meta content="/img/IMG_1646.JPG" property="og:image">
-  
-  
-  
+    {% for post in site.posts limit:5%}
 
-  
-    <meta name="twitter:card" content="">
-  
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:creator" content="@zengchen94">
-  
-    <meta name="twitter:title" content="Hello, I'm Chen">
-  
-  
-    <meta name="twitter:url" content="/">
-  
-  
-    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-  
-  
-    <meta name="twitter:image:src" content="/assets/img/IMG_1646.JPG">
-  
-
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:image" content="">
-	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#263959">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#263959">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
-	<!-- Styles -->
-	<link rel="stylesheet" href="/assets/css/main.css">
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <aside class="sidebar">
-  <header>
-    <div class="about">
-      <div class="cover-author-image">
-        <a href="/"><img src="/assets/img/IMG_1646.JPG" alt="Chen Zeng"></a>
+    <article class="post_card post">
+      <header class="post_header">
+        <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
+        <time class="post_date">{{ post.date | date: "%d %B %Y, %A" }}</time>
+      </header>
+      <div class="post_excerpt">
+        <p>
+          {% if post.description %}
+          {{ post.description}}
+          {% else %}
+          {{ post.excerpt }}
+          {% endif %} 
+          <a class="read-more" href="{{ post.url | prepend: site.baseurl }}"> »  </a>
+        </p> 
       </div>
-      <div class="author-name">Chen Zeng</div>
-      <p>I'm a Master of Computer Science student at Rice University. At the same time, I'm also a Software Engineer and will intern at Google next summer.</p>
-    </div>
-  </header> <!-- End Header -->
-  <footer>
-    <section class="contact">
-      <h3 class="contact-title">Contact me</h3>
-      <ul>
-        
-          <li><a href="https://twitter.com/zengchen94" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        
-        
-          <li><a href="https://facebook.com/zcunique" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        
-        
-          <li class="github"><a href="http://github.com/zengchen94" target="_blank"><i class="fa fa-github"></i></a></li>
-        
-        
-          <li class="linkedin"><a href="https://in.linkedin.com/in/chen-zeng" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        
-        
-          <li class="email"><a href="mailto:zengchen94@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-        
-      </ul>
-    </section> <!-- End Section Contact -->
-    <div class="copyright">
-      <p>2017 &copy; Chen Zeng</p>
-    </div>
-  </footer> <!-- End Footer -->
-</aside> <!-- End Sidebar -->
-<div class="content-box clearfix">
-  
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/sql-queries/">Basic Knowledge of SQL</a></h2>
-    <p>After reviewing the slides from COMP533 in Fall17, here are some basic knowledge of sql....</p>
-    <span class="post-date">2017, Dec 30&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">13 minute read</span>
+      <footer class="post_meta">
+
+
+        {% if post.location %}
+        <span class="author-location">
+          <div data-icon="ei-location"></div>
+          <a href=https://www.google.com/maps/place/{{post.location}}">{{ post.location }}</a>
+        </span>
+        {% endif %}
+        <!--
+        {% for category in post.categories %}
+        <a href="{{"/category/" | append: category | prepend: site.baseurl }}">
+          <data data-icon="ei-archive"></data>
+          {{category}}</a>
+        {% endfor %}
+        -->
+
+        <!--
+        {% if post.author %}
+        <span class="author_meta">
+          <img src="{{site.baseurl}}/assets/img/{{post.author}}.jpg"></img>
+          <span>David Lin</span>
+        </span>
+        {% endif %}
+        -->
+
+        <!--p class="readmore">
+          <a href=""><data data-icon="ei-arrow-right"></data>Read this article  </a>
+        </p-->
+      </footer>
+      <hr/>
+    </article>
+    {% endfor %}
+
+    <div class="pagination older-post"><a href="./archive"><data data-icon="ei-arrow-right"></data> Archive  </a></div>
   </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/./2017-12-17-travel-to-florida/florida-is-the-best-state.jpg)" href="/travel-to-florida/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/travel-to-florida/">Travel to Florida</a></h2>
-    <p>This post is to record the travel of visiting Florida, including Miami, Key West, and...</p>
-    <span class="post-date">2017, Dec 17&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">8 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/./2017-12-17-conclusion-of-internship-seeking/intern.png)" href="/conclusion-of-internship-seeking/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/conclusion-of-internship-seeking/">Conclusion of Internship Seeking</a></h2>
-    <p>After about 3-month seeking for internship, I finially decide to join in Google next summer...</p>
-    <span class="post-date">2017, Dec 17&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">4 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/welcome-to-jekyll/">Welcome to Jekyll!</a></h2>
-    <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build...</p>
-    <span class="post-date">2017, Apr 06&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">1 minute read</span>
-  </div>
-</article>
-
-
-<div class="container">
-  <nav class="pagination" role="pagination">
-    <ul>
-      
-
-      <p><span class="page-number">Page 1 of 1</span></p>
-
-      
-    </ul>
-  </nav>
 </div>
-
-
-</div>
-
-  </div>
-  
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script> <!-- End Analytics -->
-
-</body>
-</html>
