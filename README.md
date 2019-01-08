@@ -1,22 +1,52 @@
-[![](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/wild-flame)
+## Flexible-Jekyll is a simple and clean theme for Jekyll
 
-# jekyll-simple
+Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
 
-## simple
-simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
+<!-- ![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true) -->
 
-Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
+<!-- ## Demo
 
-Supposedly, this could work with Japanese as well but never had a chance to try.
+The main page would look like this:
 
-## Story behind this theme
+![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
 
-It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
+The post page would look like this:
 
-iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
+![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true) -->
 
-So mobile goes first, then the macOS.
+## Features
 
-## ^-^
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [Disqus](https://disqus.com/)
+- [Analytics](https://analytics.google.com/analytics/web/)
+- Support Emoji
 
-You can click the button [Say Thanks!](https://saythanks.io/to/wild-flame) at the first of README if you use/like my project. :D
+## Installation:
+
+Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+
+### License
+
+GNU General Public License v3.0
+
+## Usage
+1. Download and install dependencies. Make sure you have installed `ruby`, `gem`, `bundle` and `jekyll`.
+
+```bash
+bundle install
+```
+
+2. After modifying or adding articles in `./_posts`, use the following command to rebuild. Generated static files can be found in `./_site`.
+
+```bash
+jekyll build
+```
+
+Or, run as a local web server:
+
+```bash
+jekyll serve watch
+```
+
+The usage part is quoted from the blog of [Hao Cui](https://github.com/CuiH/Blog). Thanks to him.
